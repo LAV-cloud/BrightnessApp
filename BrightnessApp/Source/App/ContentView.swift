@@ -7,15 +7,15 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    private let imageEditorVM: ImageEditorViewModel? = .init()
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        if let imageEditorVM = self.imageEditorVM {
+            ImageEditorView(vm: imageEditorVM)
         }
-        .padding()
     }
 }
 
