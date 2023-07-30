@@ -22,8 +22,8 @@ final class ImageEditorViewModel: ObservableObject {
     private let service: ImageProccessingService
     
     
-    init?(service: ImageProccessingService = .init(filter: BrightnessImageFilter())) {
-        guard let image = UIImage(named: "image") else {
+    init?(imageName: String, service: ImageProccessingService) {
+        guard let image = UIImage(named: imageName) else {
             return nil
         }
         
@@ -40,6 +40,9 @@ final class ImageEditorViewModel: ObservableObject {
         let image: UIImage = self.originalImage
         Task.detached(priority: .userInitiated) {
             guard let resultImage = self.service.proccess(image: image, intensivity: brightness) else {
+                DispatchQueue.main.async {
+                    self.setLoading(false)
+                }
                 return
             }
             

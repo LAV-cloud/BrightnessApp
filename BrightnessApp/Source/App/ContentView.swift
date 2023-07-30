@@ -9,7 +9,10 @@ import SwiftUI
 
 
 struct ContentView: View {
-    private let imageEditorVM: ImageEditorViewModel? = .init()
+    private let imageEditorVM: ImageEditorViewModel? = .init(
+        imageName: "image",
+        service: ImageProccessingService(filter: BrightnessImageFilter())
+    )
     
     
     var body: some View {

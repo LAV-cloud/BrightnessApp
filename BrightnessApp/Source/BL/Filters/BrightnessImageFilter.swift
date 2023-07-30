@@ -12,9 +12,11 @@ import Foundation
 final class BrightnessImageFilter: ImageFilter {
     
     func apply(to image: UIImage, intensivity: Float) -> UIImage? {
-        let filter = MTIBrightnessFilter()
+        let filter = CustomBrightnessFilter()
+        let inputImage: MTIImage = .init(image: image, isOpaque: true)
+        
         filter.brightness = intensivity
-        filter.inputImage = .init(image: image, isOpaque: true)
+        filter.inputImage = inputImage
         
         guard let outputImage: MTIImage = filter.outputImage,
               let device = MTLCreateSystemDefaultDevice(),

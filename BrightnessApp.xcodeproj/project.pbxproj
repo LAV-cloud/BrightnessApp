@@ -17,6 +17,8 @@
 		5FDAC9922A74157D000636E1 /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAC9912A74157D000636E1 /* ImageFilter.swift */; };
 		5FDAC9942A7415B0000636E1 /* BrightnessImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAC9932A7415B0000636E1 /* BrightnessImageFilter.swift */; };
 		5FDAC9972A741717000636E1 /* ImageProccessingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAC9962A741717000636E1 /* ImageProccessingService.swift */; };
+		5FDAC9992A7612FB000636E1 /* BrightnessAdjustment.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAC9982A7612FB000636E1 /* BrightnessAdjustment.metal */; };
+		5FDAC99E2A761768000636E1 /* CustomMPBrightnessFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAC99D2A761768000636E1 /* CustomMPBrightnessFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		5FDAC9912A74157D000636E1 /* ImageFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilter.swift; sourceTree = "<group>"; };
 		5FDAC9932A7415B0000636E1 /* BrightnessImageFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessImageFilter.swift; sourceTree = "<group>"; };
 		5FDAC9962A741717000636E1 /* ImageProccessingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProccessingService.swift; sourceTree = "<group>"; };
+		5FDAC9982A7612FB000636E1 /* BrightnessAdjustment.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BrightnessAdjustment.metal; sourceTree = "<group>"; };
+		5FDAC99D2A761768000636E1 /* CustomMPBrightnessFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMPBrightnessFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +145,9 @@
 		5FDAC98E2A741557000636E1 /* BL */ = {
 			isa = PBXGroup;
 			children = (
+				5FDAC99C2A76173A000636E1 /* CustomMetalFilters */,
+				5FDAC99A2A7615BC000636E1 /* Shaders */,
 				5FDAC9952A741705000636E1 /* Services */,
-				5FDAC9902A741574000636E1 /* Protocols */,
 				5FDAC98F2A741567000636E1 /* Filters */,
 			);
 			path = BL;
@@ -151,6 +156,7 @@
 		5FDAC98F2A741567000636E1 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
+				5FDAC9902A741574000636E1 /* Protocols */,
 				5FDAC9932A7415B0000636E1 /* BrightnessImageFilter.swift */,
 			);
 			path = Filters;
@@ -170,6 +176,22 @@
 				5FDAC9962A741717000636E1 /* ImageProccessingService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		5FDAC99A2A7615BC000636E1 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				5FDAC9982A7612FB000636E1 /* BrightnessAdjustment.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		5FDAC99C2A76173A000636E1 /* CustomMetalFilters */ = {
+			isa = PBXGroup;
+			children = (
+				5FDAC99D2A761768000636E1 /* CustomMPBrightnessFilter.swift */,
+			);
+			path = CustomMetalFilters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +273,8 @@
 				5FDAC9942A7415B0000636E1 /* BrightnessImageFilter.swift in Sources */,
 				5F8011C52A72B69400721ED3 /* ContentView.swift in Sources */,
 				5FDAC9922A74157D000636E1 /* ImageFilter.swift in Sources */,
+				5FDAC99E2A761768000636E1 /* CustomMPBrightnessFilter.swift in Sources */,
+				5FDAC9992A7612FB000636E1 /* BrightnessAdjustment.metal in Sources */,
 				5F8011D62A72B6DC00721ED3 /* ImageEditorView.swift in Sources */,
 				5F8011C32A72B69400721ED3 /* BrightnessAppApp.swift in Sources */,
 				5FDAC9972A741717000636E1 /* ImageProccessingService.swift in Sources */,
